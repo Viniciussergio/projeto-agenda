@@ -18,7 +18,7 @@ exports.register = async function(req, res) {
         }
 
         req.flash('success', 'Contato registrado com sucesso.');
-        req.session.save(() =>  res.redirect(`/contato/index/${contato.contato._id}`));
+        req.session.save(() =>  res.redirect(`/agenda/contato/index/${contato.contato._id}`));
         return;
     } catch(e) {
         return res.render('404');
@@ -52,7 +52,7 @@ exports.edit = async function(req, res) {
         }
 
         req.flash('success', 'Contato editado com sucesso.');
-        req.session.save(() =>  res.redirect(`/contato/index/${contato.contato._id}`));
+        req.session.save(() =>  res.redirect(`/agenda/contato/index/${contato.contato._id}`));
         return;
     } catch(e) {
         console.log(e);

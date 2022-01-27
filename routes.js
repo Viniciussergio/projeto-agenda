@@ -7,19 +7,19 @@ const contatoController = require('./src/controllers/contatoController');
 const {loginRequired} = require('./src/middlewares/middleware');
 
 // Rotas da Home
-route.get('/', homeController.index);
+route.get('/agenda', homeController.index);
 
 // Rotas de Login
-route.get('/login/index', loginController.index);
-route.post('/login/register', loginController.register);
-route.post('/login/login', loginController.login);
-route.get('/login/logout', loginController.logout);
+route.get('/agenda/login/index', loginController.index);
+route.post('/agenda/login/register', loginController.register);
+route.post('/agenda/login/login', loginController.login);
+route.get('/agenda/login/logout', loginController.logout);
 
 //Rotas de Contato
-route.get('/contato/index', loginRequired, contatoController.index);
-route.get('/contato/index/:id', loginRequired, contatoController.editIndex);
-route.post('/contato/register', loginRequired, contatoController.register);
-route.post('/contato/edit/:id', loginRequired, contatoController.edit);
-route.get('/contato/delete/:id', loginRequired, contatoController.delete);
+route.get('/agenda/contato/index', loginRequired, contatoController.index);
+route.get('/agenda/contato/index/:id', loginRequired, contatoController.editIndex);
+route.post('/agenda/contato/register', loginRequired, contatoController.register);
+route.post('/agenda/contato/edit/:id', loginRequired, contatoController.edit);
+route.get('/agenda/contato/delete/:id', loginRequired, contatoController.delete);
 
 module.exports = route;

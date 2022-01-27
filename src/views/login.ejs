@@ -15,7 +15,7 @@
                     <h4>Faça seu cadastro</h4>
                     <p>Se você ainda não tem conta, preencha o formulário abaixo:</p>
 
-                    <form method="POST" action="/login/register">
+                    <form method="POST" action="/agenda/login/register">
                         <input type="hidden" name="_csrf" value=<%= csrfToken%>>
                         <div class="form-group">
                           <label>Seu e-mail</label>
@@ -33,7 +33,7 @@
                     <h4>Fazer o Login</h4>
                     <p>Se você já tem uma conta, faça login abaixo:</p>
 
-                    <form method="POST" action="/login/login">
+                    <form method="POST" action="/agenda/login/login">
                         <input type="hidden" name="_csrf" value=<%= csrfToken%>>
                         <div class="form-group">
                           <label>Seu e-mail</label>
