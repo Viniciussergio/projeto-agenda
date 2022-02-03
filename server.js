@@ -43,7 +43,7 @@ app.use(csrfMiddleware);
 app.use(routes);
 
 app.on('pronto', () => {
-  app.listen(3333, () => {
+  app.listen(process.env.PORT || 3333, () => {
     console.log('Acessar http://localhost:3333');
     console.log('Servidor executando na porta 3333');
   });
